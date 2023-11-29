@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace DAO
 {
     public class InvitadoDao
     {
-        public void AltaInvitado(invitadoEntity nuevoInvitado) 
+        public void AltaInvitado(InvitadoEntity nuevoInvitado) 
         {
             try
             {
