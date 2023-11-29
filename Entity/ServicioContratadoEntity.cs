@@ -10,6 +10,6 @@ namespace Entity
     {
         public int Cantidad { get; set; }
 
-        public double subtotal { get; set; }
+        public double Subtotal { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class InvitadoEntity
+    public class InvitadoEntity : PersonaEntity
     {
         public int CodigoEvento {  get; set; }
     }

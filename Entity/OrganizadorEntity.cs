@@ -9,11 +9,11 @@ namespace Entity
     public class OrganizadorEntity : PersonaEntity
     {      
         //ATRIBUTOS
-        private List<ServicioContratadoEntity> serviciosContratados = new List<ServicioContratadoEntity>();
+        private List<EventoEntity> Eventos = new List<EventoEntity>();
 
         //PROPIEDADES
         public int CodigoOrganizador {  get; set; }
         public Int64 Dni { get; set; }
-        public List<ServicioContratadoEntity> ServiciosContratados { get => serviciosContratados; set => serviciosContratados = value; }
+        public List<EventoEntity> Eventos1 { get => Eventos; set => Eventos = value; }
     }
 }

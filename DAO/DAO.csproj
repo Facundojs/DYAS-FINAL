@@ -56,15 +56,15 @@
     <Compile Include="DbEntities\INVITADO.cs" />
     <Compile Include="DbEntities\ORGANIZADOR.cs" />
     <Compile Include="EventoDao.cs" />
-    <Compile Include="EventoServicioDao.cs" />
     <Compile Include="InvitadoDao.cs" />
     <Compile Include="OrganizadorDao.cs" />
     <Compile Include="DbEntities\PAGO.cs" />
-    <Compile Include="PagoDao.cs" />
+    <Compile Include="FacturaDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DbEntities\PROVEEDOR.cs" />
     <Compile Include="DbEntities\SERVICIO.cs" />
     <Compile Include="ProveedorDao.cs" />
+    <Compile Include="ServicioContratadoDao.cs" />
     <Compile Include="ServicioDao.cs" />
   </ItemGroup>
   <ItemGroup>
