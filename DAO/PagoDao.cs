@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class OrganizadorDao
+    public class PagoDao
     {
-
     }
 }
