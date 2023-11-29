@@ -39,8 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textNombre = new System.Windows.Forms.TextBox();
-            this.textApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@
             this.btnRegistro.TabIndex = 14;
             this.btnRegistro.Text = "Registrarse";
             this.btnRegistro.UseVisualStyleBackColor = false;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // txtCotraseñaRegistro
             // 
@@ -157,19 +158,19 @@
             this.label6.Text = "Apellido:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textNombre
+            // txtNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(103, 396);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(271, 26);
-            this.textNombre.TabIndex = 12;
+            this.txtNombre.Location = new System.Drawing.Point(103, 396);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(271, 26);
+            this.txtNombre.TabIndex = 12;
             // 
-            // textApellido
+            // txtApellido
             // 
-            this.textApellido.Location = new System.Drawing.Point(102, 468);
-            this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(271, 26);
-            this.textApellido.TabIndex = 15;
+            this.txtApellido.Location = new System.Drawing.Point(102, 468);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(271, 26);
+            this.txtApellido.TabIndex = 15;
             // 
             // label7
             // 
@@ -269,10 +270,10 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtDNI);
-            this.Controls.Add(this.textApellido);
+            this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.textConfirmarContraseña);
             this.Controls.Add(this.btnRegistro);
-            this.Controls.Add(this.textNombre);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCotraseñaRegistro);
             this.Controls.Add(this.txtUsuarioRegistro);
             this.Controls.Add(this.label10);
@@ -306,8 +307,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.TextBox textApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label8;

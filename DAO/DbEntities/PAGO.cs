@@ -10,17 +10,13 @@ namespace DAO
     public partial class PAGO
     {
         [Key]
-        [Column(Order = 0)]
         public int ID_PAGO { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        public Guid ID_EVENTO { get; set; }
+        public int? ID_EVENTO { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime FECHA_PAGO { get; set; }
+        public DateTime? FECHA { get; set; }
 
-        public decimal? TOTAL { get; set; }
+        public double? MONTO { get; set; }
 
         public virtual EVENTO EVENTO { get; set; }
     }

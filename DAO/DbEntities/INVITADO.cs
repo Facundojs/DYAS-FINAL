@@ -11,18 +11,21 @@ namespace DAO
     {
         [Key]
         [Column(Order = 0)]
-        public Guid ID_EVENTO { get; set; }
+        [StringLength(50)]
+        public string EMAIL { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(50)]
-        public string EMAIL { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID_EVENTO { get; set; }
 
         [StringLength(50)]
         public string NOMBRE { get; set; }
 
-        [StringLength(30)]
+        [StringLength(50)]
         public string APELLIDO { get; set; }
+
+        public long? DNI { get; set; }
 
         public virtual EVENTO EVENTO { get; set; }
     }

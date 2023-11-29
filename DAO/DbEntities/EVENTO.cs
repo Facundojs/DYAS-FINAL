@@ -18,19 +18,25 @@ namespace DAO
         }
 
         [Key]
-        public Guid ID_EVENTO { get; set; }
+        public int ID_EVENTO { get; set; }
 
-        public int ID_USUARIO { get; set; }
+        public int? ID_ORGANIZADOR { get; set; }
 
-        public DateTime FECHA_HORA { get; set; }
+        [StringLength(50)]
+        public string NOMBRE_EVENTO { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? FECHA { get; set; }
+
+        public TimeSpan? HORA { get; set; }
 
         [StringLength(100)]
         public string LUGAR { get; set; }
 
+        public virtual ORGANIZADOR ORGANIZADOR { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EVENTO_SERVICIO> EVENTO_SERVICIO { get; set; }
-
-        public virtual USUARIO USUARIO { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INVITADO> INVITADO { get; set; }
