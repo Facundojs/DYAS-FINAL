@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace DAO
 {
+
     public partial class Model1 : DbContext
     {
         public Model1()
