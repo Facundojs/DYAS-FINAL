@@ -17,7 +17,7 @@ namespace Business
 
         public EventoEntity CrearEvento(EventoEntity evento)
         {
-            using (TransactionScope trx = new TransactionScope()) 
+            using (TransactionScope trx = new TransactionScope())
             {
                 try {
                     bool esPosteriorHoy = evento.Fecha > DateTime.Now;
@@ -41,7 +41,7 @@ namespace Business
 
                     EventoEntity eventoCreado = eventoDao.AltaEvento(eventoDto);
 
-                    if(evento.Invitados.Count > 0) 
+                    if(evento.Invitados.Count > 0)
                     {
                         foreach(InvitadoEntity invitado in evento.Invitados)
                             AñadirInvitado(eventoCreado.CodigoEvento, invitado);
@@ -66,12 +66,12 @@ namespace Business
                 }
             }
         }
-    
+
         public void AñadirInvitado(int idEvento, InvitadoEntity invitado)
         {
             using(TransactionScope trx = new TransactionScope())
             {
-                try 
+                try
                 {
                     if(string.IsNullOrEmpty(invitado.Nombre))
                         throw new Exception("Ingresa un nombre!");
@@ -104,7 +104,7 @@ namespace Business
                 catch (Exception e) { throw e; }
             }
         }
-        
+
         //public void GenerarFacturas()
         //public EventoEntity ObtenerEvento()
         //{
