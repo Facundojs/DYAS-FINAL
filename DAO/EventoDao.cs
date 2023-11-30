@@ -51,6 +51,25 @@ namespace DAO
             catch { throw; }
         }
 
+        public void ModificarEvento(EventoEntity evento)
+        {
+            try
+            {
+                using (ContextDb context = new ContextDb())
+                {
+                    var eventoDb = context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == evento.CodigoEvento);
+
+                    eventoDb.NOMBRE_EVENTO = evento.Nombre;
+                    eventoDb.FECHA = evento.Fecha.Date;
+                    eventoDb.HORA = evento.Fecha.TimeOfDay;
+                    eventoDb.LUGAR = evento.Lugar;
+
+                    context.SaveChanges();
+                }
+            }
+            catch { throw; }
+        }
+
 
         public EventoEntity ObtenerEvento(int CodigoEvento)
         {
