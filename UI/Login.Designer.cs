@@ -54,9 +54,9 @@
             // 
             // txtCotraseña
             // 
-            this.txtCotraseña.Location = new System.Drawing.Point(823, 336);
+            this.txtCotraseña.Location = new System.Drawing.Point(826, 336);
             this.txtCotraseña.Name = "txtCotraseña";
-            this.txtCotraseña.Size = new System.Drawing.Size(271, 26);
+            this.txtCotraseña.Size = new System.Drawing.Size(262, 26);
             this.txtCotraseña.TabIndex = 6;
             // 
             // txtUsuario
