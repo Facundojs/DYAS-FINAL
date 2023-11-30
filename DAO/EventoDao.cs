@@ -113,5 +113,20 @@ namespace DAO
             catch { throw; }
         }
 
+
+        public bool EsEventoPago(int codigoEvento)
+        {
+            try
+            {
+                using (ContextDb context = new ContextDb())
+                {
+                    
+                    return context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == codigoEvento && E.PAGO == true) != null;
+                        
+                }
+            }
+            catch { throw; }
+        }
+
     }
 }
