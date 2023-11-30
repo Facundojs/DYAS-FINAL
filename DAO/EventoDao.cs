@@ -41,7 +41,7 @@ namespace DAO
             {
                 using (ContextDb context = new ContextDb())
                 {
-                    var eventoDb = context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == CodigoEvento);
+                    var eventoDb = context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == CodigoEvento) ?? throw new Exception("No se encuentra el evento seleccionado");
 
                     context.EVENTO.Remove(eventoDb);
 
@@ -57,7 +57,7 @@ namespace DAO
             {
                 using (ContextDb context = new ContextDb())
                 {
-                    var eventoDb = context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == evento.CodigoEvento);
+                    var eventoDb = context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == evento.CodigoEvento) ?? throw new Exception("No se encuentra el evento seleccionado");
 
                     eventoDb.NOMBRE_EVENTO = evento.Nombre;
                     eventoDb.FECHA = evento.Fecha.Date;
@@ -77,7 +77,7 @@ namespace DAO
             {
                 using (ContextDb context = new ContextDb())
                 {
-                    var eventoDb = context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == CodigoEvento);
+                    var eventoDb = context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == CodigoEvento) ?? throw new Exception("No se encuentra el evento seleccionado");
 
                     var evento = new EventoEntity
                     {

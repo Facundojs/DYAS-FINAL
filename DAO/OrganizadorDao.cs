@@ -16,7 +16,7 @@ namespace DAO
             {
                 using(ContextDb context = new ContextDb())
                 {
-                    var organizadorDb = context.ORGANIZADOR.SingleOrDefault(O => O.EMAIL == usuario);
+                    var organizadorDb = context.ORGANIZADOR.SingleOrDefault(O => O.EMAIL == usuario) ?? throw new Exception("No se encuentra el Organizador");
 
                     var organizador = new OrganizadorEntity
                     {

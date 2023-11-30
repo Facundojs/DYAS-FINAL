@@ -37,8 +37,8 @@ namespace DAO
             {
                 using (ContextDb context = new ContextDb())
                 {
-                    var pagoDb = context.PAGO.SingleOrDefault(P => P.ID_EVENTO == codigoEvento);
-
+                    var pagoDb = context.PAGO.SingleOrDefault(P => P.ID_EVENTO == codigoEvento) ?? throw new Exception("No se encuentra la factura seleccionada"); 
+                    
                     var factura = new FacturaEntity
                     {
                         CodigoFactura = pagoDb.ID_PAGO,
