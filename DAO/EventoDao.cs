@@ -9,7 +9,7 @@ namespace DAO
 {
     public class EventoDao
     {
-        public void AltaEvento(EventoEntity nuevoEvento, int codigoOrganizador) 
+        public EventoEntity AltaEvento(EventoEntity nuevoEvento) 
         {
             try
             {
@@ -17,16 +17,18 @@ namespace DAO
                 {
                     var eventoDb = new EVENTO 
                     { 
-                        ID_ORGANIZADOR = codigoOrganizador,
+                        ID_ORGANIZADOR = nuevoEvento.CodigoOrganizador,
                         NOMBRE_EVENTO = nuevoEvento.Nombre,
-                        FECHA = nuevoEvento.Fecha.Date,
                         HORA = nuevoEvento.Fecha.TimeOfDay,
+                        FECHA = nuevoEvento.Fecha.Date,
                         LUGAR = nuevoEvento.Lugar                   
                     };
 
-                    context.EVENTO.Add(eventoDb);
+                    EVENTO evento = context.EVENTO.Add(eventoDb);
 
                     context.SaveChanges();
+
+                    return ObtenerEvento(evento.ID_EVENTO);
                 }
             }
             catch { throw; }            
@@ -79,10 +81,11 @@ namespace DAO
 
                     var evento = new EventoEntity
                     {
+                        Fecha = Convert.ToDateTime(eventoDb.FECHA).Add(Convert.ToDateTime(eventoDb.HORA).TimeOfDay),
+                        CodigoOrganizador = (int)eventoDb.ID_ORGANIZADOR,
                         CodigoEvento = eventoDb.ID_EVENTO,
                         Nombre = eventoDb.NOMBRE_EVENTO,
                         Lugar = eventoDb.LUGAR,
-                        Fecha = Convert.ToDateTime(eventoDb.FECHA).Add(Convert.ToDateTime(eventoDb.HORA).TimeOfDay)
                     };
 
                     return evento;
