@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class FormHome
+    partial class FormHome 
     {
         /// <summary>
         /// Required designer variable.
