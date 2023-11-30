@@ -70,12 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<EmbeddedResource Include="FormHome.resx">
-  <DependentUpon>FormHome.cs</DependentUpon>
-<EmbeddedResource/>
-<Compile Include="Registro.cs">
-  <SubType>Form</SubType>
-</Compile>
+	  <EmbeddedResource Include="FormHome.resx">
+		  <DependentUpon>FormHome.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <Compile Include="Registro.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
 <Compile Include="Registro.Designer.cs">
   <DependentUpon>Registro.cs</DependentUpon>
 </Compile>
