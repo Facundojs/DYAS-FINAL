@@ -125,6 +125,12 @@ namespace Business
             {
                 using(TransactionScope trx = new TransactionScope())
                 {
+                    var evento = eventoDao.ObtenerEvento(CodigoEvento) ?? throw new Exception("Evento no encontrado");
+                    
+                    // Si ya se pagaron los servicios no se puede eliminar
+                    if (evento.Pago)
+                        throw new Exception("No se puede eliminar un evento ya pago");
+
                     // Elimino invitados
                     var invitados = invitadoBusiness.Listar(CodigoEvento);
 
