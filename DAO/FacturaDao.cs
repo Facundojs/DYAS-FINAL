@@ -1,6 +1,7 @@
 ﻿using Entity;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +18,9 @@ namespace DAO
                 {
                     var pagoDb = new PAGO 
                     {
+                        ID_PAGO = context.PAGO.Count() + 1,
                         ID_EVENTO = codigoEvento,
-                        FECHA = nuevaFactura.FechaEmision,
+                        FECHA = DateTime.Now,
                         MONTO = nuevaFactura.Monto
                     };
 
