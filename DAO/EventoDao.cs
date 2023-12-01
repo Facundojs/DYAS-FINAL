@@ -86,6 +86,7 @@ namespace DAO
                         CodigoEvento = eventoDb.ID_EVENTO,
                         Nombre = eventoDb.NOMBRE_EVENTO,
                         Lugar = eventoDb.LUGAR,
+                        Pago = (bool)eventoDb.PAGO
                     };
 
                     return evento;

@@ -19,6 +19,7 @@ namespace Entity
         public string Nombre { get; set; }
         public string Lugar{ get; set; }
         public DateTime Fecha { get; set; }
+        public bool Pago { get; set; }  
         public FacturaEntity Factura { get; set; }
         public List<InvitadoEntity> Invitados { get; set; }
         public List<ServicioContratadoEntity> ServiciosContratados { get; set; }
