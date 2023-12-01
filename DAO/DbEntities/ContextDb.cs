@@ -5,12 +5,14 @@ using System.Linq;
 
 namespace DAO
 {
-<<<<<<< HEAD:DAO/Model1.cs
+
 
     public partial class Model1 : DbContext
-=======
+    {
+
+    }
+
     public partial class ContextDb : DbContext
->>>>>>> d91407f26b07d0bc8ef663e24cfb2529fc6d1961:DAO/DbEntities/ContextDb.cs
     {
         public ContextDb()
             : base("name=ContextDb")

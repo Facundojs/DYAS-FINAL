@@ -71,5 +71,17 @@ namespace UI
                 }
             }*/
         }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            // CREO una instancia del formulario Registro
+            Registro registroForm = new Registro();
+
+            // Muestro el formulario Registro
+            registroForm.Show();
+
+            // Cierro el formulario Login
+            this.Close();
+        }
     }
 }
