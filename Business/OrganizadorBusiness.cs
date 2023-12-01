@@ -14,6 +14,9 @@ namespace Business
 
         public OrganizadorEntity Login(string username, string password)
         {
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                throw new Exception("Completa mail y contraseña!");
+
             bool credencialesValidas = organizadorDao.ValidarCredenciales(username, password);
 
             if (!credencialesValidas)
