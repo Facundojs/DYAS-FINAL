@@ -16,5 +16,17 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            // CREO una instancia del formulario Registro
+            FormHome hForm = new FormHome();
+
+            // Muestro el formulario Registro
+            hForm.Show();
+
+            // Cierro el formulario Login
+            this.Hide();
+        }
     }
 }
