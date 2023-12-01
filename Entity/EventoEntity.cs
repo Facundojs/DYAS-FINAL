@@ -14,6 +14,7 @@ namespace Entity
 
 
         //PROPIEDADES
+        public int CodigoOrganizador { get; set; }
         public int CodigoEvento { get; set; }
         public string Nombre { get; set; }
         public string Lugar{ get; set; }

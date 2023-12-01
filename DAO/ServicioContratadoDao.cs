@@ -39,9 +39,11 @@ namespace DAO
             {
                 using (ContextDb context = new ContextDb())
                 {
-                    var EventoServicio = context.EVENTO_SERVICIO.SingleOrDefault(E => E.ID_EVENTO == codigoEvento && E.ID_SERVICIO == servicioContratado.CodigoServicio);
+                    var eventoServicio = context.EVENTO_SERVICIO.SingleOrDefault(E => E.ID_EVENTO == codigoEvento && E.ID_SERVICIO == servicioContratado.CodigoServicio) 
+                                        ?? throw new Exception("El servicio que desea quitar no existe");
 
-                    context.EVENTO_SERVICIO.Remove(EventoServicio);
+                    
+                    context.EVENTO_SERVICIO.Remove(eventoServicio);
 
                     context.SaveChanges();
                 }

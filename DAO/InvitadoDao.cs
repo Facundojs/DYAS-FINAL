@@ -38,7 +38,7 @@ namespace DAO
             {
                 using (ContextDb context = new ContextDb())
                 {
-                    var invitadoDb = context.INVITADO.SingleOrDefault(I => I.ID_EVENTO == codigoEvento && I.EMAIL == InvitadoEmail);
+                    var invitadoDb = context.INVITADO.SingleOrDefault(I => I.ID_EVENTO == codigoEvento && I.EMAIL == InvitadoEmail) ?? throw new Exception("El invitado seleccionado no existe"); ;
 
                     context.INVITADO.Remove(invitadoDb);
 
