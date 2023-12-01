@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventoBusiness.cs" />
+    <Compile Include="FacturaBusiness.cs" />
     <Compile Include="InvitadoBusiness.cs" />
     <Compile Include="OrganizadorBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
