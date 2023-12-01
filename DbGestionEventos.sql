@@ -171,8 +171,8 @@ INSERT INTO SERVICIO VALUES
 
 
 INSERT INTO EVENTO VALUES
-	(1,'Festejo de divorcio','2023-6-12','22:00:00','Av.Cordoba 1236 - CABA'),
-	(1,'Despedida de año','2023-12-20','20:00:00','Av. Rolon 123 - BOULOGNE');	   
+	(1,'Festejo de divorcio','2023-6-12','22:00:00','Av.Cordoba 1236 - CABA',DEFAULT),
+	(1,'Despedida de año','2023-12-20','20:00:00','Av. Rolon 123 - BOULOGNE',DEFAULT);	   
 
 
 INSERT INTO EVENTO_SERVICIO VALUES
