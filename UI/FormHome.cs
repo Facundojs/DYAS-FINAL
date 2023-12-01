@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,12 @@ namespace UI
 {
     public partial class FormHome : Form
     {
-        public FormHome()
+        public FormHome(OrganizadorEntity o)
         {
             InitializeComponent();
+            organizador = o;
         }
+        private OrganizadorEntity organizador;
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -78,6 +81,11 @@ namespace UI
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardarEvento_Click(object sender, EventArgs e)
         {
 
         }
