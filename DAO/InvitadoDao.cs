@@ -3,13 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Transactions;
 using System.Threading.Tasks;
 
 namespace DAO
 {
     public class InvitadoDao
     {
-        public void AltaInvitado(InvitadoEntity nuevoInvitado, int codigoEvento) 
+        public void AltaInvitado(InvitadoEntity nuevoInvitado) 
         {
             try
             {
@@ -17,10 +18,10 @@ namespace DAO
                 {
                     INVITADO invitadoDb = new INVITADO
                     {
-                        ID_EVENTO = codigoEvento,
-                        EMAIL = nuevoInvitado.Email,
+                        ID_EVENTO = nuevoInvitado.CodigoEvento,
+                        APELLIDO = nuevoInvitado.Apellido,
                         NOMBRE = nuevoInvitado.Nombre,
-                        APELLIDO = nuevoInvitado.Apellido
+                        EMAIL = nuevoInvitado.Email,
                     };                    
 
                     context.INVITADO.Add(invitadoDb);
@@ -32,13 +33,13 @@ namespace DAO
         }
 
 
-        public void BajaInvitado(int codigoEvento, string InvitadoEmail)
+        public void BajaInvitado(InvitadoEntity invitado)
         {
             try
             {
                 using (ContextDb context = new ContextDb())
                 {
-                    var invitadoDb = context.INVITADO.SingleOrDefault(I => I.ID_EVENTO == codigoEvento && I.EMAIL == InvitadoEmail) ?? throw new Exception("El invitado seleccionado no existe"); ;
+                    var invitadoDb = context.INVITADO.SingleOrDefault(I => I.ID_EVENTO == invitado.CodigoEvento && I.EMAIL == invitado.Email);
 
                     context.INVITADO.Remove(invitadoDb);
 

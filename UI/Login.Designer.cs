@@ -54,9 +54,9 @@
             // 
             // txtCotraseña
             // 
-            this.txtCotraseña.Location = new System.Drawing.Point(823, 336);
+            this.txtCotraseña.Location = new System.Drawing.Point(826, 336);
             this.txtCotraseña.Name = "txtCotraseña";
-            this.txtCotraseña.Size = new System.Drawing.Size(271, 26);
+            this.txtCotraseña.Size = new System.Drawing.Size(262, 26);
             this.txtCotraseña.TabIndex = 6;
             // 
             // txtUsuario
@@ -113,6 +113,7 @@
             this.btnRegistro.TabIndex = 10;
             this.btnRegistro.Text = "Registrarse";
             this.btnRegistro.UseVisualStyleBackColor = false;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // label4
             // 
@@ -144,6 +145,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GA Eventos";
             this.ResumeLayout(false);
             this.PerformLayout();
