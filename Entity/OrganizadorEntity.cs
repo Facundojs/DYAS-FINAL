@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Entity
 {
     public class OrganizadorEntity : PersonaEntity
-    {      
+    {
         //ATRIBUTOS
         private List<EventoEntity> Eventos = new List<EventoEntity>();
 
