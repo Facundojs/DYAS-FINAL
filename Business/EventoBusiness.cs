@@ -18,7 +18,7 @@ namespace Business
 
         private EventoEntity ObtenerRelaciones(EventoEntity evento)
         {
-            //evento.ServiciosContratados = servicioContratadoDao.ListarServiciosContrados(evento.CodigoEvento);
+            evento.ServiciosContratados = servicioContratadoDao.ListarServiciosContrados(evento.CodigoEvento);
             evento.Invitados = invitadoBusiness.Listar(evento.CodigoEvento);
 
             return evento;
