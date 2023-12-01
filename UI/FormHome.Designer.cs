@@ -73,12 +73,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label10.Location = new System.Drawing.Point(98, 427);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(65, 285);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(164, 19);
+            this.label10.Size = new System.Drawing.Size(118, 13);
             this.label10.TabIndex = 15;
             this.label10.Text = "Seleccione Evento:";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -86,22 +85,20 @@
             // comboEventosContr
             // 
             this.comboEventosContr.FormattingEnabled = true;
-            this.comboEventosContr.Location = new System.Drawing.Point(94, 452);
-            this.comboEventosContr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboEventosContr.Location = new System.Drawing.Point(63, 301);
             this.comboEventosContr.Name = "comboEventosContr";
-            this.comboEventosContr.Size = new System.Drawing.Size(236, 28);
+            this.comboEventosContr.Size = new System.Drawing.Size(159, 21);
             this.comboEventosContr.TabIndex = 17;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label12.Location = new System.Drawing.Point(95, 491);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(63, 327);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(172, 19);
+            this.label12.Size = new System.Drawing.Size(124, 13);
             this.label12.TabIndex = 18;
             this.label12.Text = "Seleccione Servicio:";
             this.label12.Click += new System.EventHandler(this.label12_Click);
@@ -109,42 +106,38 @@
             // comboServicios
             // 
             this.comboServicios.FormattingEnabled = true;
-            this.comboServicios.Location = new System.Drawing.Point(94, 515);
-            this.comboServicios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboServicios.Location = new System.Drawing.Point(63, 343);
             this.comboServicios.Name = "comboServicios";
-            this.comboServicios.Size = new System.Drawing.Size(236, 28);
+            this.comboServicios.Size = new System.Drawing.Size(159, 21);
             this.comboServicios.TabIndex = 19;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label13.Location = new System.Drawing.Point(94, 556);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(63, 371);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 19);
+            this.label13.Size = new System.Drawing.Size(61, 13);
             this.label13.TabIndex = 20;
             this.label13.Text = "Cantidad:";
             // 
             // txtCantidadServ
             // 
-            this.txtCantidadServ.Location = new System.Drawing.Point(94, 581);
-            this.txtCantidadServ.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCantidadServ.Location = new System.Drawing.Point(63, 387);
             this.txtCantidadServ.Name = "txtCantidadServ";
-            this.txtCantidadServ.Size = new System.Drawing.Size(127, 26);
+            this.txtCantidadServ.Size = new System.Drawing.Size(86, 20);
             this.txtCantidadServ.TabIndex = 21;
             // 
             // btnContratarServicio
             // 
             this.btnContratarServicio.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnContratarServicio.Font = new System.Drawing.Font("GothamMedium", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContratarServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContratarServicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnContratarServicio.Location = new System.Drawing.Point(117, 632);
-            this.btnContratarServicio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnContratarServicio.Location = new System.Drawing.Point(78, 421);
             this.btnContratarServicio.Name = "btnContratarServicio";
-            this.btnContratarServicio.Size = new System.Drawing.Size(212, 43);
+            this.btnContratarServicio.Size = new System.Drawing.Size(141, 29);
             this.btnContratarServicio.TabIndex = 22;
             this.btnContratarServicio.Text = "Contratar Servicio";
             this.btnContratarServicio.UseVisualStyleBackColor = false;
@@ -153,22 +146,20 @@
             // comboEventosInvi
             // 
             this.comboEventosInvi.FormattingEnabled = true;
-            this.comboEventosInvi.Location = new System.Drawing.Point(976, 139);
-            this.comboEventosInvi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboEventosInvi.Location = new System.Drawing.Point(657, 96);
             this.comboEventosInvi.Name = "comboEventosInvi";
-            this.comboEventosInvi.Size = new System.Drawing.Size(262, 28);
+            this.comboEventosInvi.Size = new System.Drawing.Size(176, 21);
             this.comboEventosInvi.TabIndex = 25;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label15.Location = new System.Drawing.Point(977, 115);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(651, 77);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(164, 19);
+            this.label15.Size = new System.Drawing.Size(118, 13);
             this.label15.TabIndex = 24;
             this.label15.Text = "Seleccione Evento:";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -177,87 +168,79 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label16.Location = new System.Drawing.Point(975, 176);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(650, 117);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(166, 19);
+            this.label16.Size = new System.Drawing.Size(114, 13);
             this.label16.TabIndex = 26;
             this.label16.Text = "Ingrese el Nombre:";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // txtNombreInvi
             // 
-            this.txtNombreInvi.Location = new System.Drawing.Point(976, 201);
-            this.txtNombreInvi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombreInvi.Location = new System.Drawing.Point(657, 137);
             this.txtNombreInvi.Name = "txtNombreInvi";
-            this.txtNombreInvi.Size = new System.Drawing.Size(262, 26);
+            this.txtNombreInvi.Size = new System.Drawing.Size(176, 20);
             this.txtNombreInvi.TabIndex = 27;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label17.Location = new System.Drawing.Point(976, 237);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(651, 158);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(169, 19);
+            this.label17.Size = new System.Drawing.Size(116, 13);
             this.label17.TabIndex = 28;
             this.label17.Text = "Ingrese el Apellido:";
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // txtApellidoInvi
             // 
-            this.txtApellidoInvi.Location = new System.Drawing.Point(976, 262);
-            this.txtApellidoInvi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellidoInvi.Location = new System.Drawing.Point(657, 178);
             this.txtApellidoInvi.Name = "txtApellidoInvi";
-            this.txtApellidoInvi.Size = new System.Drawing.Size(262, 26);
+            this.txtApellidoInvi.Size = new System.Drawing.Size(176, 20);
             this.txtApellidoInvi.TabIndex = 29;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label18.Location = new System.Drawing.Point(979, 296);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(653, 197);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(145, 19);
+            this.label18.Size = new System.Drawing.Size(101, 13);
             this.label18.TabIndex = 30;
             this.label18.Text = "Ingrese el Email:";
             this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // txtEmailInvi
             // 
-            this.txtEmailInvi.Location = new System.Drawing.Point(976, 321);
-            this.txtEmailInvi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmailInvi.Location = new System.Drawing.Point(657, 217);
             this.txtEmailInvi.Name = "txtEmailInvi";
-            this.txtEmailInvi.Size = new System.Drawing.Size(262, 26);
+            this.txtEmailInvi.Size = new System.Drawing.Size(176, 20);
             this.txtEmailInvi.TabIndex = 31;
             // 
             // dataGridFacturas
             // 
             this.dataGridFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridFacturas.Location = new System.Drawing.Point(416, 491);
-            this.dataGridFacturas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridFacturas.Location = new System.Drawing.Point(277, 327);
             this.dataGridFacturas.Name = "dataGridFacturas";
             this.dataGridFacturas.RowHeadersWidth = 62;
-            this.dataGridFacturas.Size = new System.Drawing.Size(473, 128);
+            this.dataGridFacturas.Size = new System.Drawing.Size(315, 85);
             this.dataGridFacturas.TabIndex = 32;
             // 
             // btnAgregarInvitado
             // 
             this.btnAgregarInvitado.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgregarInvitado.Font = new System.Drawing.Font("GothamMedium", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarInvitado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarInvitado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAgregarInvitado.Location = new System.Drawing.Point(1050, 355);
-            this.btnAgregarInvitado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregarInvitado.Location = new System.Drawing.Point(700, 237);
             this.btnAgregarInvitado.Name = "btnAgregarInvitado";
-            this.btnAgregarInvitado.Size = new System.Drawing.Size(188, 43);
+            this.btnAgregarInvitado.Size = new System.Drawing.Size(125, 29);
             this.btnAgregarInvitado.TabIndex = 33;
             this.btnAgregarInvitado.Text = "Agregar Invitado";
             this.btnAgregarInvitado.UseVisualStyleBackColor = false;
@@ -266,22 +249,20 @@
             // comboEventosPagar
             // 
             this.comboEventosPagar.FormattingEnabled = true;
-            this.comboEventosPagar.Location = new System.Drawing.Point(415, 450);
-            this.comboEventosPagar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboEventosPagar.Location = new System.Drawing.Point(277, 300);
             this.comboEventosPagar.Name = "comboEventosPagar";
-            this.comboEventosPagar.Size = new System.Drawing.Size(262, 28);
+            this.comboEventosPagar.Size = new System.Drawing.Size(176, 21);
             this.comboEventosPagar.TabIndex = 35;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label19.Location = new System.Drawing.Point(419, 424);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(279, 283);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(230, 19);
+            this.label19.Size = new System.Drawing.Size(166, 13);
             this.label19.TabIndex = 34;
             this.label19.Text = "Seleccione Evento a Pagar:";
             this.label19.Click += new System.EventHandler(this.label19_Click);
@@ -289,12 +270,11 @@
             // btnPagarEvento
             // 
             this.btnPagarEvento.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPagarEvento.Font = new System.Drawing.Font("GothamMedium", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagarEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagarEvento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPagarEvento.Location = new System.Drawing.Point(610, 633);
-            this.btnPagarEvento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPagarEvento.Location = new System.Drawing.Point(407, 422);
             this.btnPagarEvento.Name = "btnPagarEvento";
-            this.btnPagarEvento.Size = new System.Drawing.Size(271, 43);
+            this.btnPagarEvento.Size = new System.Drawing.Size(181, 29);
             this.btnPagarEvento.TabIndex = 36;
             this.btnPagarEvento.Text = "Pagar y Generar Factura";
             this.btnPagarEvento.UseVisualStyleBackColor = false;
@@ -303,22 +283,20 @@
             // comboEventosInvitados
             // 
             this.comboEventosInvitados.FormattingEnabled = true;
-            this.comboEventosInvitados.Location = new System.Drawing.Point(979, 450);
-            this.comboEventosInvitados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboEventosInvitados.Location = new System.Drawing.Point(653, 300);
             this.comboEventosInvitados.Name = "comboEventosInvitados";
-            this.comboEventosInvitados.Size = new System.Drawing.Size(262, 28);
+            this.comboEventosInvitados.Size = new System.Drawing.Size(176, 21);
             this.comboEventosInvitados.TabIndex = 39;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label21.Location = new System.Drawing.Point(981, 425);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(654, 283);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(164, 19);
+            this.label21.Size = new System.Drawing.Size(118, 13);
             this.label21.TabIndex = 38;
             this.label21.Text = "Seleccione Evento:";
             this.label21.Click += new System.EventHandler(this.label21_Click);
@@ -326,31 +304,28 @@
             // dataListaInvitados
             // 
             this.dataListaInvitados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListaInvitados.Location = new System.Drawing.Point(979, 490);
-            this.dataListaInvitados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataListaInvitados.Location = new System.Drawing.Point(653, 327);
             this.dataListaInvitados.Name = "dataListaInvitados";
             this.dataListaInvitados.RowHeadersWidth = 62;
-            this.dataListaInvitados.Size = new System.Drawing.Size(262, 129);
+            this.dataListaInvitados.Size = new System.Drawing.Size(175, 86);
             this.dataListaInvitados.TabIndex = 41;
             // 
             // txtNomEvento
             // 
             this.txtNomEvento.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNomEvento.Location = new System.Drawing.Point(87, 141);
-            this.txtNomEvento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNomEvento.Location = new System.Drawing.Point(58, 94);
             this.txtNomEvento.Name = "txtNomEvento";
-            this.txtNomEvento.Size = new System.Drawing.Size(239, 26);
+            this.txtNomEvento.Size = new System.Drawing.Size(161, 20);
             this.txtNomEvento.TabIndex = 1;
             // 
             // btnGuardarEvento
             // 
             this.btnGuardarEvento.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardarEvento.Font = new System.Drawing.Font("GothamMedium", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarEvento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardarEvento.Location = new System.Drawing.Point(126, 325);
-            this.btnGuardarEvento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardarEvento.Location = new System.Drawing.Point(84, 217);
             this.btnGuardarEvento.Name = "btnGuardarEvento";
-            this.btnGuardarEvento.Size = new System.Drawing.Size(197, 43);
+            this.btnGuardarEvento.Size = new System.Drawing.Size(131, 29);
             this.btnGuardarEvento.TabIndex = 2;
             this.btnGuardarEvento.Text = "Guardar Evento";
             this.btnGuardarEvento.UseVisualStyleBackColor = false;
@@ -361,32 +336,29 @@
             this.datePicker.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.datePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePicker.Location = new System.Drawing.Point(87, 206);
-            this.datePicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.datePicker.Location = new System.Drawing.Point(58, 137);
             this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(239, 26);
+            this.datePicker.Size = new System.Drawing.Size(161, 20);
             this.datePicker.TabIndex = 3;
             // 
             // dataGridEventos
             // 
             this.dataGridEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEventos.Location = new System.Drawing.Point(415, 141);
-            this.dataGridEventos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridEventos.Location = new System.Drawing.Point(277, 94);
             this.dataGridEventos.Name = "dataGridEventos";
             this.dataGridEventos.RowHeadersWidth = 62;
-            this.dataGridEventos.Size = new System.Drawing.Size(474, 158);
+            this.dataGridEventos.Size = new System.Drawing.Size(316, 105);
             this.dataGridEventos.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(89, 116);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(59, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 19);
+            this.label3.Size = new System.Drawing.Size(119, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre del Evento:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -395,12 +367,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(90, 181);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(60, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(190, 19);
+            this.label4.Size = new System.Drawing.Size(138, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Seleccione una Fecha:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -409,34 +380,31 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(90, 246);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(60, 164);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(194, 19);
+            this.label6.Size = new System.Drawing.Size(139, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Ingrese una Ubicacion:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtUbicaEve
             // 
-            this.txtUbicaEve.Location = new System.Drawing.Point(85, 271);
-            this.txtUbicaEve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUbicaEve.Location = new System.Drawing.Point(57, 181);
             this.txtUbicaEve.Name = "txtUbicaEve";
-            this.txtUbicaEve.Size = new System.Drawing.Size(239, 26);
+            this.txtUbicaEve.Size = new System.Drawing.Size(161, 20);
             this.txtUbicaEve.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(415, 308);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(277, 205);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(250, 19);
+            this.label7.Size = new System.Drawing.Size(177, 13);
             this.label7.TabIndex = 42;
             this.label7.Text = "Seleccione Evento a Eliminar:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -444,21 +412,19 @@
             // comboEventosEliminar
             // 
             this.comboEventosEliminar.FormattingEnabled = true;
-            this.comboEventosEliminar.Location = new System.Drawing.Point(415, 335);
-            this.comboEventosEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboEventosEliminar.Location = new System.Drawing.Point(277, 223);
             this.comboEventosEliminar.Name = "comboEventosEliminar";
-            this.comboEventosEliminar.Size = new System.Drawing.Size(262, 28);
+            this.comboEventosEliminar.Size = new System.Drawing.Size(176, 21);
             this.comboEventosEliminar.TabIndex = 43;
             // 
             // btnEliminarEvento
             // 
             this.btnEliminarEvento.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEliminarEvento.Font = new System.Drawing.Font("GothamMedium", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarEvento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminarEvento.Location = new System.Drawing.Point(701, 328);
-            this.btnEliminarEvento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminarEvento.Location = new System.Drawing.Point(467, 219);
             this.btnEliminarEvento.Name = "btnEliminarEvento";
-            this.btnEliminarEvento.Size = new System.Drawing.Size(188, 43);
+            this.btnEliminarEvento.Size = new System.Drawing.Size(125, 29);
             this.btnEliminarEvento.TabIndex = 44;
             this.btnEliminarEvento.Text = "Eliminar Evento";
             this.btnEliminarEvento.UseVisualStyleBackColor = false;
@@ -467,12 +433,11 @@
             // btnVerInvitados
             // 
             this.btnVerInvitados.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnVerInvitados.Font = new System.Drawing.Font("GothamMedium", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerInvitados.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerInvitados.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVerInvitados.Location = new System.Drawing.Point(1053, 629);
-            this.btnVerInvitados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVerInvitados.Location = new System.Drawing.Point(702, 419);
             this.btnVerInvitados.Name = "btnVerInvitados";
-            this.btnVerInvitados.Size = new System.Drawing.Size(188, 43);
+            this.btnVerInvitados.Size = new System.Drawing.Size(125, 29);
             this.btnVerInvitados.TabIndex = 33;
             this.btnVerInvitados.Text = "Ver Invitados";
             this.btnVerInvitados.UseVisualStyleBackColor = false;
@@ -480,11 +445,11 @@
             // 
             // FormHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1344, 712);
+            this.ClientSize = new System.Drawing.Size(896, 475);
             this.Controls.Add(this.btnEliminarEvento);
             this.Controls.Add(this.comboEventosEliminar);
             this.Controls.Add(this.label7);
@@ -521,7 +486,6 @@
             this.Controls.Add(this.btnGuardarEvento);
             this.Controls.Add(this.txtNomEvento);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHome";

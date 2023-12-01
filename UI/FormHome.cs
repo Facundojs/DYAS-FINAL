@@ -15,7 +15,7 @@ namespace UI
     public partial class FormHome : Form
     {
         private EventoBusiness eventoBusiness = new EventoBusiness();
-       
+        private InvitadoBusiness invitadoBusiness = new InvitadoBusiness();
 
         public FormHome(OrganizadorEntity o)
         {
@@ -25,6 +25,7 @@ namespace UI
             CargarTablaEventos();
         }
         private OrganizadorEntity organizador;
+
 
         private void CargarTablaEventos()
         {
@@ -127,7 +128,15 @@ namespace UI
 
         private void btnEliminarEvento_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                eventoBusiness.BorrarEvento(Convert.ToInt32(comboEventosEliminar.SelectedValue));
+                CargarTablaEventos();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnContratarServicio_Click(object sender, EventArgs e)
@@ -142,12 +151,35 @@ namespace UI
 
         private void btnAgregarInvitado_Click(object sender, EventArgs e)
         {
+            try
+            {
+                InvitadoEntity invi = new InvitadoEntity();
+                invi.CodigoEvento = Convert.ToInt32(comboEventosInvi.SelectedValue);
+                invi.Nombre = txtNombreInvi.Text;
+                invi.Apellido = txtApellidoInvi.Text;
+                invi.Email = txtEmailInvi.Text;
 
+                invitadoBusiness.Crear(invi);
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnVerInvitados_Click(object sender, EventArgs e)
         {
+            try
+            {
+                dataListaInvitados.DataSource = null;
+                dataListaInvitados.DataSource = invitadoBusiness.Listar(Convert.ToInt32(comboEventosInvitados.SelectedValue));
 
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void FormHome_Load(object sender, EventArgs e)
         {
