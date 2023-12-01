@@ -30,46 +30,62 @@ namespace UI
                 MessageBox.Show("El nombre de usuario debe tener al menos 5 caracteres.");
                 return;
             }
-
-            // VERIFICO que la contraseña no esté vacía, tenga al menos 8 caracteres, una mayúscula y un número
-
-            if (string.IsNullOrEmpty(contraseña) || contraseña.Length <= 8 )
+            else
             {
-                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, Contenes una mayúscula y un número.");
-                return;
+                // VERIFICO que la contraseña no esté vacía, tenga al menos 8 caracteres, una mayúscula y un número
+
+                if (string.IsNullOrEmpty(contraseña) || contraseña.Length <= 8)
+                {
+                    MessageBox.Show("La contraseña debe tener al menos 8 caracteres");
+                    return;
+                }
+                else
+                {
+                    // CREO una instancia del formulario Registro
+                    FormHome hForm = new FormHome();
+
+                    // Muestro el formulario Registro
+                    hForm.Show();
+
+                    // Cierro el formulario Login
+                     this.Hide();
+                }
+
+            
             }
+
 
             // COMPARAR en la base de datos DbGestionEventos si el usuario existe y si coincide la contraseña
 
-           /* using (var context = new DbGestionEventosEntities())  //  Creo el contexto de la base de datos (ver que el nombre es DbGestionEventosEntities o cambiarlo)
-            {
-                try
-                {
-                    var user = context.Usuarios.SingleOrDefault(u => u.Usuario == usuario);
-                    if (user == null)
-                    {
-                        MessageBox.Show("El usuario no existe.");
-                    }
-                    else if (user.Contraseña != contraseña)
-                    {
-                        MessageBox.Show("La contraseña no coincide.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Inicio de sesión exitoso, Bienvenido!");
+            /* using (var context = new DbGestionEventosEntities())  //  Creo el contexto de la base de datos (ver que el nombre es DbGestionEventosEntities o cambiarlo)
+             {
+                 try
+                 {
+                     var user = context.Usuarios.SingleOrDefault(u => u.Usuario == usuario);
+                     if (user == null)
+                     {
+                         MessageBox.Show("El usuario no existe.");
+                     }
+                     else if (user.Contraseña != contraseña)
+                     {
+                         MessageBox.Show("La contraseña no coincide.");
+                     }
+                     else
+                     {
+                         MessageBox.Show("Inicio de sesión exitoso, Bienvenido!");
 
-                        this.Hide();  // Cierro el formulario "Login"
+                         this.Hide();  // Cierro el formulario "Login"
 
-                        // Abrir el formulario "Eventos"
-                        Eventos eventosForm = new Eventos();
-                        eventosForm.Show();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ocurrió un error al intentar acceder a la base de datos: " + ex.Message);
-                }
-            }*/
+                         // Abrir el formulario "Eventos"
+                         Eventos eventosForm = new Eventos();
+                         eventosForm.Show();
+                     }
+                 }
+                 catch (Exception ex)
+                 {
+                     MessageBox.Show("Ocurrió un error al intentar acceder a la base de datos: " + ex.Message);
+                 }
+             }*/
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
@@ -81,7 +97,7 @@ namespace UI
             registroForm.Show();
 
             // Cierro el formulario Login
-            this.Close();
+            this.Hide();
         }
     }
 }

@@ -63,6 +63,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboEventosEliminar = new System.Windows.Forms.ComboBox();
             this.btnEliminarEvento = new System.Windows.Forms.Button();
+            this.btnVerInvitados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListaInvitados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEventos)).BeginInit();
@@ -252,7 +253,7 @@
             this.btnAgregarInvitado.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgregarInvitado.Font = new System.Drawing.Font("GothamMedium", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarInvitado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAgregarInvitado.Location = new System.Drawing.Point(1050, 361);
+            this.btnAgregarInvitado.Location = new System.Drawing.Point(1050, 355);
             this.btnAgregarInvitado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarInvitado.Name = "btnAgregarInvitado";
             this.btnAgregarInvitado.Size = new System.Drawing.Size(188, 43);
@@ -299,7 +300,7 @@
             // comboEventosInvitados
             // 
             this.comboEventosInvitados.FormattingEnabled = true;
-            this.comboEventosInvitados.Location = new System.Drawing.Point(978, 461);
+            this.comboEventosInvitados.Location = new System.Drawing.Point(979, 450);
             this.comboEventosInvitados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboEventosInvitados.Name = "comboEventosInvitados";
             this.comboEventosInvitados.Size = new System.Drawing.Size(262, 28);
@@ -311,7 +312,7 @@
             this.label21.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label21.Font = new System.Drawing.Font("Gotham", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label21.Location = new System.Drawing.Point(980, 436);
+            this.label21.Location = new System.Drawing.Point(981, 425);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(164, 19);
@@ -322,11 +323,11 @@
             // dataListaInvitados
             // 
             this.dataListaInvitados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListaInvitados.Location = new System.Drawing.Point(978, 501);
+            this.dataListaInvitados.Location = new System.Drawing.Point(979, 490);
             this.dataListaInvitados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataListaInvitados.Name = "dataListaInvitados";
             this.dataListaInvitados.RowHeadersWidth = 62;
-            this.dataListaInvitados.Size = new System.Drawing.Size(262, 164);
+            this.dataListaInvitados.Size = new System.Drawing.Size(262, 129);
             this.dataListaInvitados.TabIndex = 41;
             // 
             // txtNomEvento
@@ -458,6 +459,19 @@
             this.btnEliminarEvento.Text = "Eliminar Evento";
             this.btnEliminarEvento.UseVisualStyleBackColor = false;
             // 
+            // btnVerInvitados
+            // 
+            this.btnVerInvitados.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVerInvitados.Font = new System.Drawing.Font("GothamMedium", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerInvitados.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnVerInvitados.Location = new System.Drawing.Point(1053, 629);
+            this.btnVerInvitados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVerInvitados.Name = "btnVerInvitados";
+            this.btnVerInvitados.Size = new System.Drawing.Size(188, 43);
+            this.btnVerInvitados.TabIndex = 33;
+            this.btnVerInvitados.Text = "Ver Invitados";
+            this.btnVerInvitados.UseVisualStyleBackColor = false;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -474,6 +488,7 @@
             this.Controls.Add(this.btnPagarEvento);
             this.Controls.Add(this.comboEventosPagar);
             this.Controls.Add(this.label19);
+            this.Controls.Add(this.btnVerInvitados);
             this.Controls.Add(this.btnAgregarInvitado);
             this.Controls.Add(this.dataGridFacturas);
             this.Controls.Add(this.txtEmailInvi);
@@ -549,5 +564,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboEventosEliminar;
         private System.Windows.Forms.Button btnEliminarEvento;
+        private System.Windows.Forms.Button btnVerInvitados;
     }
 }
