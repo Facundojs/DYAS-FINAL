@@ -154,5 +154,10 @@ namespace UI
          //CargarTablaEventos();
 
         }
+
+        private void btnAgregarInvitado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
