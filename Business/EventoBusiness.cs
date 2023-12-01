@@ -12,8 +12,16 @@ namespace Business
     public class EventoBusiness
     {
         private readonly ServicioContratadoDao servicioContratadoDao = new ServicioContratadoDao();
-        private readonly InvitadoDao invitadoDao = new InvitadoDao();
+        private readonly InvitadoBusiness invitadoBusiness = new InvitadoBusiness();
         private readonly EventoDao eventoDao = new EventoDao();
+
+        private EventoEntity ObtenerRelaciones(EventoEntity evento)
+        {
+            evento.ServiciosContratados = servicioContratadoDao.ListarServiciosContrados(evento.CodigoEvento);
+            evento.Invitados = invitadoBusiness.Listar(evento.CodigoEvento);
+
+            return evento;
+        }
 
         public EventoEntity CrearEvento(EventoEntity evento)
         {
@@ -41,15 +49,20 @@ namespace Business
 
                     EventoEntity eventoCreado = eventoDao.AltaEvento(eventoDto);
 
-                    if(evento.Invitados.Count > 0)
+                    if(evento.Invitados != null && evento.Invitados.Count > 0)
                     {
                         foreach(InvitadoEntity invitado in evento.Invitados)
-                            AñadirInvitado(eventoCreado.CodigoEvento, invitado);
+                            invitadoBusiness.Crear(new InvitadoEntity
+                                {
+                                    Email = invitado.Email,
+                                    CodigoEvento = eventoCreado.CodigoEvento,
+                                }
+                            );
 
-                        eventoCreado.Invitados = invitadoDao.ListarInvitados(eventoCreado.CodigoEvento);
+                        eventoCreado.Invitados = invitadoBusiness.Listar(eventoCreado.CodigoEvento);
                     }
 
-                    if(evento.ServiciosContratados.Count > 0)
+                    if(evento.ServiciosContratados != null && evento.ServiciosContratados.Count > 0)
                     {
                         foreach (ServicioContratadoEntity servicioContratado in evento.ServiciosContratados)
                             AñadirServicioContratado(eventoCreado.CodigoEvento, servicioContratado);
@@ -67,31 +80,6 @@ namespace Business
             }
         }
 
-        public void AñadirInvitado(int idEvento, InvitadoEntity invitado)
-        {
-            using(TransactionScope trx = new TransactionScope())
-            {
-                try
-                {
-                    if(string.IsNullOrEmpty(invitado.Nombre))
-                        throw new Exception("Ingresa un nombre!");
-
-                    if (string.IsNullOrEmpty(invitado.Apellido))
-                        throw new Exception("Ingresa un Apellido!");
-
-                    Regex emailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-
-                    if (string.IsNullOrEmpty(invitado.Email) || !emailRegex.IsMatch(invitado.Email))
-                        throw new Exception("Ingresa un mail valido!");
-
-                    invitadoDao.AltaInvitado(invitado, idEvento);
-
-                    trx.Complete();
-                }
-                catch (Exception e){ throw e; }
-            }
-        }
-
         public void AñadirServicioContratado(int idEvento, ServicioContratadoEntity servicioContratado)
         {
             using (TransactionScope trx = new TransactionScope())
@@ -104,16 +92,46 @@ namespace Business
                 catch (Exception e) { throw e; }
             }
         }
+    
+        public EventoEntity Obtener(int CodigoEvento)
+        {
+            try {
+                var evento = eventoDao.ObtenerEvento(CodigoEvento);
 
-        //public void GenerarFacturas()
-        //public EventoEntity ObtenerEvento()
-        //{
+                return ObtenerRelaciones(evento);
+            }
+            catch (Exception e) { throw e; }
+        }
 
-        //}
-        //        using(TransactionScope trx = new TransactionScope())
-        //{
-        //    try { trx.Complete(); }
-        //    catch (Exception e){ throw e; }
-        //}
+        public List<EventoEntity> Listar(int CodigoOrganizador) 
+        {
+            try 
+            {
+                List<EventoEntity> eventos = new List<EventoEntity>();
+
+                var eventosDb = eventoDao.ListarEventos(CodigoOrganizador);
+
+                foreach (var evento in eventosDb)
+                    eventos.Add(ObtenerRelaciones(evento));
+
+                return eventos;
+            }
+            catch (Exception e) { throw e; }
+        }
+
+        public void BorrarEvento(int CodigoEvento)
+        {
+            try
+            {
+                using(TransactionScope trx = new TransactionScope())
+                {
+                    eventoDao.BajaEvento(CodigoEvento);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }
