@@ -260,11 +260,7 @@
             this.btnAgregarInvitado.Size = new System.Drawing.Size(188, 43);
             this.btnAgregarInvitado.TabIndex = 33;
             this.btnAgregarInvitado.Text = "Agregar Invitado";
-<<<<<<< HEAD
-            this.btnAgregarInvitado.UseVisualStyleBackColor = true;
-=======
             this.btnAgregarInvitado.UseVisualStyleBackColor = false;
->>>>>>> d46599c94d90cca68f0cbadf5f681724a6efc4d7
             this.btnAgregarInvitado.Click += new System.EventHandler(this.btnAgregarInvitado_Click);
             // 
             // comboEventosPagar
