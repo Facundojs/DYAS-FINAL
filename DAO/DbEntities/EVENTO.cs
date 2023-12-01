@@ -14,7 +14,7 @@ namespace DAO
         {
             EVENTO_SERVICIO = new HashSet<EVENTO_SERVICIO>();
             INVITADO = new HashSet<INVITADO>();
-            PAGO = new HashSet<PAGO>();
+            PAGO1 = new HashSet<PAGO>();
         }
 
         [Key]
@@ -33,6 +33,8 @@ namespace DAO
         [StringLength(100)]
         public string LUGAR { get; set; }
 
+        public bool? PAGO { get; set; }
+
         public virtual ORGANIZADOR ORGANIZADOR { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -42,6 +44,6 @@ namespace DAO
         public virtual ICollection<INVITADO> INVITADO { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PAGO> PAGO { get; set; }
+        public virtual ICollection<PAGO> PAGO1 { get; set; }
     }
 }

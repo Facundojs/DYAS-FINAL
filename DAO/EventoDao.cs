@@ -86,6 +86,7 @@ namespace DAO
                         CodigoEvento = eventoDb.ID_EVENTO,
                         Nombre = eventoDb.NOMBRE_EVENTO,
                         Lugar = eventoDb.LUGAR,
+                        Pago = (bool)eventoDb.PAGO
                     };
 
                     return evento;
@@ -108,6 +109,21 @@ namespace DAO
                     eventosDb.ForEach(E => eventos.Add(this.ObtenerEvento(E.ID_EVENTO)));
 
                     return eventos;
+                }
+            }
+            catch { throw; }
+        }
+
+
+        public bool EsEventoPago(int codigoEvento)
+        {
+            try
+            {
+                using (ContextDb context = new ContextDb())
+                {
+                    
+                    return context.EVENTO.SingleOrDefault(E => E.ID_EVENTO == codigoEvento && E.PAGO == true) != null;
+                        
                 }
             }
             catch { throw; }
