@@ -81,12 +81,13 @@ namespace DAO
 
                     var evento = new EventoEntity
                     {
-                        Fecha = Convert.ToDateTime(eventoDb.FECHA).Add(Convert.ToDateTime(eventoDb.HORA).TimeOfDay),
+                        // Fecha = Convert.ToDateTime(eventoDb.FECHA).Add(Convert.ToDateTime(eventoDb.HORA).TimeOfDay),
+                       // Fecha = DateTime.Now,
                         CodigoOrganizador = (int)eventoDb.ID_ORGANIZADOR,
                         CodigoEvento = eventoDb.ID_EVENTO,
                         Nombre = eventoDb.NOMBRE_EVENTO,
                         Lugar = eventoDb.LUGAR,
-                        Pago = (bool)eventoDb.PAGO
+                        Pago = (bool)eventoDb.PAGO,
                     };
 
                     return evento;

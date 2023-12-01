@@ -27,11 +27,11 @@ namespace Business
                 };
 
                 facturaDao.AltaFactura(factura, CodigoEvento);
-            
+
                 trx.Complete();
             }
         }
-    
+
         public FacturaEntity Obtener(int CodigoEvento)
         {
             return facturaDao.ObtenerFactura(CodigoEvento);

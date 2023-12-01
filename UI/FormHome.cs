@@ -22,14 +22,15 @@ namespace UI
             InitializeComponent();
             organizador = o;
             eventoBusiness = new EventoBusiness();
+            CargarTablaEventos();
         }
         private OrganizadorEntity organizador;
 
-       /* private void CargarTablaEventos()
+        private void CargarTablaEventos()
         {
             dataGridEventos.DataSource = null;
-            dataGridEventos.DataSource = eventoBusiness.listarEventos();
-        }*/
+            dataGridEventos.DataSource = eventoBusiness.Listar(organizador.CodigoOrganizador);
+        }
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -150,7 +151,7 @@ namespace UI
         }
         private void FormHome_Load(object sender, EventArgs e)
         {
-         // CargarTablaEventos();
+         //CargarTablaEventos();
 
         }
     }
