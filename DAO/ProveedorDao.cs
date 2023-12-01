@@ -15,7 +15,7 @@ namespace DAO
             {
                 using (ContextDb context = new ContextDb())
                 {
-                    var proveedorDb = context.PROVEEDOR.SingleOrDefault(O => O.ID_PROVEEDOR == codigoProveedor);
+                    var proveedorDb = context.PROVEEDOR.SingleOrDefault(O => O.ID_PROVEEDOR == codigoProveedor) ?? throw new Exception("No se encuentra el proveedor seleccionado");
 
                     var proveedor = new ProveedorEntity
                     {

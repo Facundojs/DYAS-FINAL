@@ -125,6 +125,19 @@ namespace Business
             {
                 using(TransactionScope trx = new TransactionScope())
                 {
+                    // Elimino invitados
+                    var invitados = invitadoBusiness.Listar(CodigoEvento);
+
+                    foreach (var invitado in invitados)
+                        invitadoBusiness.Borrar(invitado);
+
+                    // Elimino servicios contratados
+                    var serviciosContratados = servicioContratadoDao.ListarServiciosContrados(CodigoEvento);
+
+                    foreach (var servicioContratado in serviciosContratados)
+                        servicioContratadoDao.QuitarServicioContratado(servicioContratado, CodigoEvento);
+
+
                     eventoDao.BajaEvento(CodigoEvento);
                 }
             }
