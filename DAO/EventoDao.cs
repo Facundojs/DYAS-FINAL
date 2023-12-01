@@ -21,7 +21,8 @@ namespace DAO
                         NOMBRE_EVENTO = nuevoEvento.Nombre,
                         HORA = nuevoEvento.Fecha.TimeOfDay,
                         FECHA = nuevoEvento.Fecha.Date,
-                        LUGAR = nuevoEvento.Lugar                   
+                        LUGAR = nuevoEvento.Lugar,
+                        PAGO = nuevoEvento.Pago
                     };
 
                     EVENTO evento = context.EVENTO.Add(eventoDb);

@@ -175,11 +175,12 @@ namespace Business
 
                     var dto = new FacturaEntity
                     {
+
                         Monto = montoFinal
                     };
 
                     facturaBusiness.Crear(dto, CodigoEvento);
-
+                    
                     trx.Complete();
                 }
             }

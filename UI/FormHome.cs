@@ -16,6 +16,8 @@ namespace UI
     {
         private EventoBusiness eventoBusiness = new EventoBusiness();
         private InvitadoBusiness invitadoBusiness = new InvitadoBusiness();
+        private FacturaBusiness facturaBusiness = new FacturaBusiness();
+        private ServicioBusiness servicioBusiness = new ServicioBusiness();
 
         public FormHome(OrganizadorEntity o)
         {
@@ -23,6 +25,8 @@ namespace UI
             organizador = o;
             eventoBusiness = new EventoBusiness();
             CargarTablaEventos();
+            CargarCombosEventos();
+            CargarServiciosCombo();
         }
         private OrganizadorEntity organizador;
 
@@ -33,6 +37,44 @@ namespace UI
             dataGridEventos.DataSource = eventoBusiness.Listar(organizador.CodigoOrganizador);
         }
 
+        public void CargarCombosEventos()
+        {
+            comboEventosEliminar.DataSource = null;
+            comboEventosContr.DataSource = null;
+            comboEventosInvi.DataSource = null;
+            comboEventosInvitados.DataSource = null;
+            comboEventosPagar.DataSource = null;
+
+            var eventosDb = eventoBusiness.Listar(organizador.CodigoOrganizador);
+
+            comboEventosEliminar.DataSource = eventosDb;
+            comboEventosContr.DataSource = eventosDb;
+            comboEventosInvi.DataSource = eventosDb;
+            comboEventosInvitados.DataSource = eventosDb;
+            comboEventosPagar.DataSource = eventosDb;
+
+            comboEventosEliminar.ValueMember = "CodigoEvento";
+            comboEventosContr.ValueMember = "CodigoEvento";
+            comboEventosInvi.ValueMember = "CodigoEvento";
+            comboEventosInvitados.ValueMember = "CodigoEvento";
+            comboEventosPagar.ValueMember = "CodigoEvento";
+
+            comboEventosEliminar.DisplayMember = "Nombre";
+            comboEventosContr.DisplayMember = "Nombre";
+            comboEventosInvi.DisplayMember = "Nombre";
+            comboEventosInvitados.DisplayMember = "Nombre";
+            comboEventosPagar.DisplayMember = "Nombre";
+
+        }
+
+        public void CargarServiciosCombo()
+        {
+            comboServicios.DataSource = null;
+            comboServicios.DataSource = servicioBusiness.ListarServicios();
+
+            comboServicios.ValueMember = "CodigoServicio";
+            comboServicios.DisplayMember = "NombreServicio";
+        }
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -132,6 +174,7 @@ namespace UI
             {
                 eventoBusiness.BorrarEvento(Convert.ToInt32(comboEventosEliminar.SelectedValue));
                 CargarTablaEventos();
+                CargarCombosEventos();
             }
             catch(Exception ex)
             {
@@ -141,12 +184,42 @@ namespace UI
 
         private void btnContratarServicio_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ServicioContratadoEntity serv = new ServicioContratadoEntity();
+                
 
+                serv.NombreServicio = (comboServicios.SelectedItem as ServicioEntity).NombreServicio;
+                serv.Descripcion = (comboServicios.SelectedItem as ServicioEntity).Descripcion;
+                serv.CodigoServicio = Convert.ToInt32(comboServicios.SelectedValue);
+                serv.Cantidad = Convert.ToInt32(txtCantidadServ.Text);
+                serv.Precio = (comboServicios.SelectedItem as ServicioEntity).Precio;
+                serv.Subtotal = serv.Cantidad * serv.Precio;
+
+                eventoBusiness.AñadirServicioContratado(Convert.ToInt32(comboEventosContr.SelectedValue), serv);
+                CargarCombosEventos();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnPagarEvento_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                 eventoBusiness.PagarEvento(Convert.ToInt32(comboEventosPagar.SelectedValue));
+                 
+                 CargarCombosEventos();
+                 CargarTablaEventos();
+                 MessageBox.Show("Ha pagado su Evento correctamente!");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnAgregarInvitado_Click(object sender, EventArgs e)
@@ -161,6 +234,10 @@ namespace UI
 
                 invitadoBusiness.Crear(invi);
 
+                dataListaInvitados.DataSource = null;
+                var invitados = invitadoBusiness.Listar(Convert.ToInt32(comboEventosInvitados.SelectedValue));
+                dataListaInvitados.DataSource = invitados;
+
             }
             catch(Exception ex)
             {
@@ -173,7 +250,8 @@ namespace UI
             try
             {
                 dataListaInvitados.DataSource = null;
-                dataListaInvitados.DataSource = invitadoBusiness.Listar(Convert.ToInt32(comboEventosInvitados.SelectedValue));
+                var invitados = invitadoBusiness.Listar(Convert.ToInt32(comboEventosInvitados.SelectedValue));
+                dataListaInvitados.DataSource = invitados;
 
             }
             catch(Exception ex)

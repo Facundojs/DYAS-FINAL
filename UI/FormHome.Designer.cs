@@ -44,7 +44,6 @@
             this.txtApellidoInvi = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtEmailInvi = new System.Windows.Forms.TextBox();
-            this.dataGridFacturas = new System.Windows.Forms.DataGridView();
             this.btnAgregarInvitado = new System.Windows.Forms.Button();
             this.comboEventosPagar = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             this.comboEventosEliminar = new System.Windows.Forms.ComboBox();
             this.btnEliminarEvento = new System.Windows.Forms.Button();
             this.btnVerInvitados = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListaInvitados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEventos)).BeginInit();
             this.SuspendLayout();
@@ -224,15 +222,6 @@
             this.txtEmailInvi.Size = new System.Drawing.Size(176, 20);
             this.txtEmailInvi.TabIndex = 31;
             // 
-            // dataGridFacturas
-            // 
-            this.dataGridFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridFacturas.Location = new System.Drawing.Point(277, 327);
-            this.dataGridFacturas.Name = "dataGridFacturas";
-            this.dataGridFacturas.RowHeadersWidth = 62;
-            this.dataGridFacturas.Size = new System.Drawing.Size(315, 85);
-            this.dataGridFacturas.TabIndex = 32;
-            // 
             // btnAgregarInvitado
             // 
             this.btnAgregarInvitado.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -249,7 +238,7 @@
             // comboEventosPagar
             // 
             this.comboEventosPagar.FormattingEnabled = true;
-            this.comboEventosPagar.Location = new System.Drawing.Point(277, 300);
+            this.comboEventosPagar.Location = new System.Drawing.Point(349, 343);
             this.comboEventosPagar.Name = "comboEventosPagar";
             this.comboEventosPagar.Size = new System.Drawing.Size(176, 21);
             this.comboEventosPagar.TabIndex = 35;
@@ -260,7 +249,7 @@
             this.label19.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label19.Location = new System.Drawing.Point(279, 283);
+            this.label19.Location = new System.Drawing.Point(346, 309);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(166, 13);
             this.label19.TabIndex = 34;
@@ -272,7 +261,7 @@
             this.btnPagarEvento.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnPagarEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagarEvento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPagarEvento.Location = new System.Drawing.Point(407, 422);
+            this.btnPagarEvento.Location = new System.Drawing.Point(349, 387);
             this.btnPagarEvento.Name = "btnPagarEvento";
             this.btnPagarEvento.Size = new System.Drawing.Size(181, 29);
             this.btnPagarEvento.TabIndex = 36;
@@ -461,7 +450,6 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.btnVerInvitados);
             this.Controls.Add(this.btnAgregarInvitado);
-            this.Controls.Add(this.dataGridFacturas);
             this.Controls.Add(this.txtEmailInvi);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txtApellidoInvi);
@@ -491,7 +479,6 @@
             this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHome";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridFacturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListaInvitados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEventos)).EndInit();
             this.ResumeLayout(false);
@@ -515,7 +502,6 @@
         private System.Windows.Forms.TextBox txtApellidoInvi;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtEmailInvi;
-        private System.Windows.Forms.DataGridView dataGridFacturas;
         private System.Windows.Forms.Button btnAgregarInvitado;
         private System.Windows.Forms.ComboBox comboEventosPagar;
         private System.Windows.Forms.Label label19;
