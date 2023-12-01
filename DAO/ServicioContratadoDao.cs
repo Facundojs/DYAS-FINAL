@@ -67,10 +67,11 @@ namespace DAO
                                          CodigoServicio = a.ID_SERVICIO,
                                          NombreServicio = b.NOMBRE_SERVICIO,
                                          Descripcion = b.DESCRIPCION,
-                                         Cantidad = Convert.ToInt32(a.CANTIDAD),
-                                         Subtotal = Convert.ToDouble(a.SUBTOTAL),
-                                         Precio = Convert.ToDouble(Convert.ToDouble(a.SUBTOTAL) / Convert.ToInt32(a.CANTIDAD)),
+                                         Cantidad = (int)a.CANTIDAD,
+                                         Subtotal = (double)a.SUBTOTAL
                                      }).ToList();
+
+                    servicios.ForEach(S => S.Precio = (S.Subtotal / S.Cantidad));
 
                     return servicios;
                 }

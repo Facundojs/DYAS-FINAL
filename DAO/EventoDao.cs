@@ -81,9 +81,8 @@ namespace DAO
 
                     var evento = new EventoEntity
                     {
-                        // Fecha = Convert.ToDateTime(eventoDb.FECHA).Add(Convert.ToDateTime(eventoDb.HORA).TimeOfDay),
-                       // Fecha = DateTime.Now,
-                        CodigoOrganizador = (int)eventoDb.ID_ORGANIZADOR,
+                        Fecha = Convert.ToDateTime(eventoDb.FECHA.ToString()).Add(Convert.ToDateTime(eventoDb.HORA.ToString()).TimeOfDay),
+                        CodigoOrganizador = Convert.ToInt32(eventoDb.ID_ORGANIZADOR.Value),
                         CodigoEvento = eventoDb.ID_EVENTO,
                         Nombre = eventoDb.NOMBRE_EVENTO,
                         Lugar = eventoDb.LUGAR,
