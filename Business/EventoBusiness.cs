@@ -13,6 +13,7 @@ namespace Business
     {
         private readonly ServicioContratadoDao servicioContratadoDao = new ServicioContratadoDao();
         private readonly InvitadoBusiness invitadoBusiness = new InvitadoBusiness();
+        private readonly FacturaBusiness facturaBusiness = new FacturaBusiness();
         private readonly EventoDao eventoDao = new EventoDao();
 
         private EventoEntity ObtenerRelaciones(EventoEntity evento)
@@ -95,12 +96,9 @@ namespace Business
     
         public EventoEntity Obtener(int CodigoEvento)
         {
-            try {
-                var evento = eventoDao.ObtenerEvento(CodigoEvento);
+            var evento = eventoDao.ObtenerEvento(CodigoEvento);
 
-                return ObtenerRelaciones(evento);
-            }
-            catch (Exception e) { throw e; }
+            return ObtenerRelaciones(evento);
         }
 
         public List<EventoEntity> Listar(int CodigoOrganizador) 
@@ -143,11 +141,49 @@ namespace Business
                     foreach (var servicioContratado in serviciosContratados)
                         servicioContratadoDao.QuitarServicioContratado(servicioContratado, CodigoEvento);
 
-
                     eventoDao.BajaEvento(CodigoEvento);
+
+                    trx.Complete();
                 }
             }
             catch (Exception e)
+            {
+                throw e;
+            }
+        }
+    
+        public void PagarEvento(int CodigoEvento)
+        {
+            try
+            {
+                using( TransactionScope trx = new TransactionScope())
+                {
+                    var evento = Obtener(CodigoEvento);
+
+                    if (evento.Pago)
+                        throw new Exception("el evento ya esta pago");
+
+                    double montoFinal = 0;
+
+                    var serviciosContratados = servicioContratadoDao.ListarServiciosContrados(CodigoEvento);
+
+                    if (serviciosContratados.Count == 0)
+                        throw new Exception("No tienes servicios contratados");
+
+                    foreach (var servicio in serviciosContratados)
+                        montoFinal += servicio.Subtotal;
+
+                    var dto = new FacturaEntity
+                    {
+                        Monto = montoFinal
+                    };
+
+                    facturaBusiness.Crear(dto, CodigoEvento);
+
+                    trx.Complete();
+                }
+            }
+            catch(Exception e)
             {
                 throw e;
             }
