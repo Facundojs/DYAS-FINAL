@@ -16,5 +16,10 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void btnAgregarInvitado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -336,6 +336,7 @@
             this.btnAgregarInvitado.TabIndex = 33;
             this.btnAgregarInvitado.Text = "Agregar Invitado";
             this.btnAgregarInvitado.UseVisualStyleBackColor = true;
+            this.btnAgregarInvitado.Click += new System.EventHandler(this.btnAgregarInvitado_Click);
             // 
             // comboEventosPagar
             // 
