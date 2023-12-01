@@ -351,6 +351,7 @@
             this.btnGuardarEvento.TabIndex = 2;
             this.btnGuardarEvento.Text = "Guardar Evento";
             this.btnGuardarEvento.UseVisualStyleBackColor = false;
+            this.btnGuardarEvento.Click += new System.EventHandler(this.btnGuardarEvento_Click);
             // 
             // datePicker
             // 
