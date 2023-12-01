@@ -25,11 +25,11 @@ namespace UI
         }
         private OrganizadorEntity organizador;
 
-        private void CargarTablaEventos()
+       /* private void CargarTablaEventos()
         {
-          dataGridEventos.DataSource = null;
-          dataGridEventos.DataSource = eventoBusiness.ListarEventos(int.Parse(organizador.CodigoOrganizador.ToString()));
-        }
+            dataGridEventos.DataSource = null;
+            dataGridEventos.DataSource = eventoBusiness.listarEventos();
+        }*/
 
         private void label3_Click(object sender, EventArgs e)
         {
