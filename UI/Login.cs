@@ -19,9 +19,9 @@ namespace UI
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            /*
+            
             string usuario = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
+            string contraseña = txtCotraseña.Text;
 
             // VERIFICO que el usuario no esté vacío y tenga al menos 5 caracteres
 
@@ -33,7 +33,7 @@ namespace UI
 
             // VERIFICO que la contraseña no esté vacía, tenga al menos 8 caracteres, una mayúscula y un número
 
-            if (string.IsNullOrEmpty(contraseña) || contraseña.Length <= 8 || !contraseña.Any(char.IsUpper) || !contraseña.Any(char.IsDigit))
+            if (string.IsNullOrEmpty(contraseña) || contraseña.Length <= 8 )
             {
                 MessageBox.Show("La contraseña debe tener al menos 8 caracteres, Contenes una mayúscula y un número.");
                 return;
@@ -41,7 +41,7 @@ namespace UI
 
             // COMPARAR en la base de datos DbGestionEventos si el usuario existe y si coincide la contraseña
 
-            using (var context = new DbGestionEventosEntities())  //  Creo el contexto de la base de datos (ver que el nombre es DbGestionEventosEntities o cambiarlo)
+           /* using (var context = new DbGestionEventosEntities())  //  Creo el contexto de la base de datos (ver que el nombre es DbGestionEventosEntities o cambiarlo)
             {
                 try
                 {
