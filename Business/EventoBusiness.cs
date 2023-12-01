@@ -105,6 +105,15 @@ namespace Business
             }
         }
 
+        public List<EventoEntity> ListarEventos(int codigoOrganizador)
+        {
+            return eventoDao.ListarEventos(codigoOrganizador);
+        }
+      
+      
+
+      
+
         //public void GenerarFacturas()
         //public EventoEntity ObtenerEvento()
         //{

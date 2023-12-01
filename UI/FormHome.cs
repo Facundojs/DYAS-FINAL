@@ -8,17 +8,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
 
 namespace UI
 {
     public partial class FormHome : Form
     {
+        private EventoBusiness eventoBusiness = new EventoBusiness();
+       
+
         public FormHome(OrganizadorEntity o)
         {
             InitializeComponent();
             organizador = o;
+            eventoBusiness = new EventoBusiness();
         }
         private OrganizadorEntity organizador;
+
+        private void CargarTablaEventos()
+        {
+          dataGridEventos.DataSource = null;
+          dataGridEventos.DataSource = eventoBusiness.ListarEventos(int.Parse(organizador.CodigoOrganizador.ToString()));
+        }
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -85,8 +96,61 @@ namespace UI
 
         }
 
+      
         private void btnGuardarEvento_Click(object sender, EventArgs e)
         {
+            try
+            {
+                eventoBusiness.CrearEvento(new EventoEntity
+                {
+                    CodigoOrganizador = organizador.CodigoOrganizador,
+                    Nombre = txtNomEvento.Text,
+                    Fecha = datePicker.Value,
+                    Lugar = txtUbicaEve.Text,
+                    Invitados = new List<InvitadoEntity>(),
+                    ServiciosContratados = new List<ServicioContratadoEntity>()
+                });
+
+                MessageBox.Show("Evento creado con éxito!");
+
+                txtNomEvento.Clear();
+                txtUbicaEve.Clear();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+
+        private void btnEliminarEvento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContratarServicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPagarEvento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarInvitado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVerInvitados_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void FormHome_Load(object sender, EventArgs e)
+        {
+         // CargarTablaEventos();
 
         }
     }

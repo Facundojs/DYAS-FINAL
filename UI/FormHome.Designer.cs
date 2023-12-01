@@ -148,6 +148,7 @@
             this.btnContratarServicio.TabIndex = 22;
             this.btnContratarServicio.Text = "Contratar Servicio";
             this.btnContratarServicio.UseVisualStyleBackColor = false;
+            this.btnContratarServicio.Click += new System.EventHandler(this.btnContratarServicio_Click);
             // 
             // comboEventosInvi
             // 
@@ -260,6 +261,7 @@
             this.btnAgregarInvitado.TabIndex = 33;
             this.btnAgregarInvitado.Text = "Agregar Invitado";
             this.btnAgregarInvitado.UseVisualStyleBackColor = false;
+            this.btnAgregarInvitado.Click += new System.EventHandler(this.btnAgregarInvitado_Click);
             // 
             // comboEventosPagar
             // 
@@ -296,6 +298,7 @@
             this.btnPagarEvento.TabIndex = 36;
             this.btnPagarEvento.Text = "Pagar y Generar Factura";
             this.btnPagarEvento.UseVisualStyleBackColor = false;
+            this.btnPagarEvento.Click += new System.EventHandler(this.btnPagarEvento_Click);
             // 
             // comboEventosInvitados
             // 
@@ -459,6 +462,7 @@
             this.btnEliminarEvento.TabIndex = 44;
             this.btnEliminarEvento.Text = "Eliminar Evento";
             this.btnEliminarEvento.UseVisualStyleBackColor = false;
+            this.btnEliminarEvento.Click += new System.EventHandler(this.btnEliminarEvento_Click);
             // 
             // btnVerInvitados
             // 
@@ -472,6 +476,7 @@
             this.btnVerInvitados.TabIndex = 33;
             this.btnVerInvitados.Text = "Ver Invitados";
             this.btnVerInvitados.UseVisualStyleBackColor = false;
+            this.btnVerInvitados.Click += new System.EventHandler(this.btnVerInvitados_Click);
             // 
             // FormHome
             // 
