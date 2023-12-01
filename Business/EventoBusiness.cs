@@ -180,7 +180,10 @@ namespace Business
                     };
 
                     facturaBusiness.Crear(dto, CodigoEvento);
-                    
+
+                    evento.Pago = true;
+
+                    eventoDao.ModificarEvento(evento);
                     trx.Complete();
                 }
             }
