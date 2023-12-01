@@ -78,10 +78,10 @@
             this.label10.Size = new System.Drawing.Size(118, 13);
             this.label10.TabIndex = 15;
             this.label10.Text = "Seleccione Evento:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // comboEventosContr
             // 
+            this.comboEventosContr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEventosContr.FormattingEnabled = true;
             this.comboEventosContr.Location = new System.Drawing.Point(63, 301);
             this.comboEventosContr.Name = "comboEventosContr";
@@ -99,10 +99,10 @@
             this.label12.Size = new System.Drawing.Size(124, 13);
             this.label12.TabIndex = 18;
             this.label12.Text = "Seleccione Servicio:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // comboServicios
             // 
+            this.comboServicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboServicios.FormattingEnabled = true;
             this.comboServicios.Location = new System.Drawing.Point(63, 343);
             this.comboServicios.Name = "comboServicios";
@@ -143,8 +143,9 @@
             // 
             // comboEventosInvi
             // 
+            this.comboEventosInvi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEventosInvi.FormattingEnabled = true;
-            this.comboEventosInvi.Location = new System.Drawing.Point(657, 96);
+            this.comboEventosInvi.Location = new System.Drawing.Point(688, 101);
             this.comboEventosInvi.Name = "comboEventosInvi";
             this.comboEventosInvi.Size = new System.Drawing.Size(176, 21);
             this.comboEventosInvi.TabIndex = 25;
@@ -155,12 +156,11 @@
             this.label15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label15.Location = new System.Drawing.Point(651, 77);
+            this.label15.Location = new System.Drawing.Point(682, 82);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(118, 13);
             this.label15.TabIndex = 24;
             this.label15.Text = "Seleccione Evento:";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
@@ -168,16 +168,15 @@
             this.label16.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label16.Location = new System.Drawing.Point(650, 117);
+            this.label16.Location = new System.Drawing.Point(681, 122);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(114, 13);
             this.label16.TabIndex = 26;
             this.label16.Text = "Ingrese el Nombre:";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // txtNombreInvi
             // 
-            this.txtNombreInvi.Location = new System.Drawing.Point(657, 137);
+            this.txtNombreInvi.Location = new System.Drawing.Point(688, 142);
             this.txtNombreInvi.Name = "txtNombreInvi";
             this.txtNombreInvi.Size = new System.Drawing.Size(176, 20);
             this.txtNombreInvi.TabIndex = 27;
@@ -188,16 +187,15 @@
             this.label17.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label17.Location = new System.Drawing.Point(651, 158);
+            this.label17.Location = new System.Drawing.Point(682, 163);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(116, 13);
             this.label17.TabIndex = 28;
             this.label17.Text = "Ingrese el Apellido:";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // txtApellidoInvi
             // 
-            this.txtApellidoInvi.Location = new System.Drawing.Point(657, 178);
+            this.txtApellidoInvi.Location = new System.Drawing.Point(688, 183);
             this.txtApellidoInvi.Name = "txtApellidoInvi";
             this.txtApellidoInvi.Size = new System.Drawing.Size(176, 20);
             this.txtApellidoInvi.TabIndex = 29;
@@ -208,16 +206,15 @@
             this.label18.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label18.Location = new System.Drawing.Point(653, 197);
+            this.label18.Location = new System.Drawing.Point(684, 202);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(101, 13);
             this.label18.TabIndex = 30;
             this.label18.Text = "Ingrese el Email:";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // txtEmailInvi
             // 
-            this.txtEmailInvi.Location = new System.Drawing.Point(657, 217);
+            this.txtEmailInvi.Location = new System.Drawing.Point(688, 222);
             this.txtEmailInvi.Name = "txtEmailInvi";
             this.txtEmailInvi.Size = new System.Drawing.Size(176, 20);
             this.txtEmailInvi.TabIndex = 31;
@@ -227,7 +224,7 @@
             this.btnAgregarInvitado.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgregarInvitado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarInvitado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAgregarInvitado.Location = new System.Drawing.Point(700, 237);
+            this.btnAgregarInvitado.Location = new System.Drawing.Point(731, 242);
             this.btnAgregarInvitado.Name = "btnAgregarInvitado";
             this.btnAgregarInvitado.Size = new System.Drawing.Size(125, 29);
             this.btnAgregarInvitado.TabIndex = 33;
@@ -237,8 +234,9 @@
             // 
             // comboEventosPagar
             // 
+            this.comboEventosPagar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEventosPagar.FormattingEnabled = true;
-            this.comboEventosPagar.Location = new System.Drawing.Point(349, 343);
+            this.comboEventosPagar.Location = new System.Drawing.Point(355, 343);
             this.comboEventosPagar.Name = "comboEventosPagar";
             this.comboEventosPagar.Size = new System.Drawing.Size(176, 21);
             this.comboEventosPagar.TabIndex = 35;
@@ -249,19 +247,18 @@
             this.label19.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label19.Location = new System.Drawing.Point(346, 309);
+            this.label19.Location = new System.Drawing.Point(352, 309);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(166, 13);
             this.label19.TabIndex = 34;
             this.label19.Text = "Seleccione Evento a Pagar:";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // btnPagarEvento
             // 
             this.btnPagarEvento.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnPagarEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagarEvento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPagarEvento.Location = new System.Drawing.Point(349, 387);
+            this.btnPagarEvento.Location = new System.Drawing.Point(355, 387);
             this.btnPagarEvento.Name = "btnPagarEvento";
             this.btnPagarEvento.Size = new System.Drawing.Size(181, 29);
             this.btnPagarEvento.TabIndex = 36;
@@ -271,8 +268,9 @@
             // 
             // comboEventosInvitados
             // 
+            this.comboEventosInvitados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEventosInvitados.FormattingEnabled = true;
-            this.comboEventosInvitados.Location = new System.Drawing.Point(653, 300);
+            this.comboEventosInvitados.Location = new System.Drawing.Point(684, 305);
             this.comboEventosInvitados.Name = "comboEventosInvitados";
             this.comboEventosInvitados.Size = new System.Drawing.Size(176, 21);
             this.comboEventosInvitados.TabIndex = 39;
@@ -283,17 +281,16 @@
             this.label21.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label21.Location = new System.Drawing.Point(654, 283);
+            this.label21.Location = new System.Drawing.Point(685, 288);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(118, 13);
             this.label21.TabIndex = 38;
             this.label21.Text = "Seleccione Evento:";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // dataListaInvitados
             // 
             this.dataListaInvitados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListaInvitados.Location = new System.Drawing.Point(653, 327);
+            this.dataListaInvitados.Location = new System.Drawing.Point(684, 332);
             this.dataListaInvitados.Name = "dataListaInvitados";
             this.dataListaInvitados.RowHeadersWidth = 62;
             this.dataListaInvitados.Size = new System.Drawing.Size(175, 86);
@@ -333,7 +330,7 @@
             // dataGridEventos
             // 
             this.dataGridEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEventos.Location = new System.Drawing.Point(277, 94);
+            this.dataGridEventos.Location = new System.Drawing.Point(297, 93);
             this.dataGridEventos.Name = "dataGridEventos";
             this.dataGridEventos.RowHeadersWidth = 62;
             this.dataGridEventos.Size = new System.Drawing.Size(316, 105);
@@ -350,7 +347,6 @@
             this.label3.Size = new System.Drawing.Size(119, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre del Evento:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -363,7 +359,6 @@
             this.label4.Size = new System.Drawing.Size(138, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Seleccione una Fecha:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label6
             // 
@@ -376,7 +371,6 @@
             this.label6.Size = new System.Drawing.Size(139, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Ingrese una Ubicacion:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtUbicaEve
             // 
@@ -391,7 +385,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(277, 205);
+            this.label7.Location = new System.Drawing.Point(297, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(177, 13);
             this.label7.TabIndex = 42;
@@ -400,8 +394,9 @@
             // 
             // comboEventosEliminar
             // 
+            this.comboEventosEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEventosEliminar.FormattingEnabled = true;
-            this.comboEventosEliminar.Location = new System.Drawing.Point(277, 223);
+            this.comboEventosEliminar.Location = new System.Drawing.Point(297, 222);
             this.comboEventosEliminar.Name = "comboEventosEliminar";
             this.comboEventosEliminar.Size = new System.Drawing.Size(176, 21);
             this.comboEventosEliminar.TabIndex = 43;
@@ -411,7 +406,7 @@
             this.btnEliminarEvento.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEliminarEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarEvento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminarEvento.Location = new System.Drawing.Point(467, 219);
+            this.btnEliminarEvento.Location = new System.Drawing.Point(487, 218);
             this.btnEliminarEvento.Name = "btnEliminarEvento";
             this.btnEliminarEvento.Size = new System.Drawing.Size(125, 29);
             this.btnEliminarEvento.TabIndex = 44;
@@ -424,7 +419,7 @@
             this.btnVerInvitados.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnVerInvitados.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerInvitados.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVerInvitados.Location = new System.Drawing.Point(702, 419);
+            this.btnVerInvitados.Location = new System.Drawing.Point(733, 424);
             this.btnVerInvitados.Name = "btnVerInvitados";
             this.btnVerInvitados.Size = new System.Drawing.Size(125, 29);
             this.btnVerInvitados.TabIndex = 33;

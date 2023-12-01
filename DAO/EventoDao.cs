@@ -64,6 +64,7 @@ namespace DAO
                     eventoDb.FECHA = evento.Fecha.Date;
                     eventoDb.HORA = evento.Fecha.TimeOfDay;
                     eventoDb.LUGAR = evento.Lugar;
+                    eventoDb.PAGO = evento.Pago;
 
                     context.SaveChanges();
                 }
